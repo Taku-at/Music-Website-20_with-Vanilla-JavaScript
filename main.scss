@@ -5,187 +5,33 @@
 */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    width: 100%;
-    height: 100vh;
-    background: #131312;
-    font-family: 'Popins', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: #131312;
+  font-family: "Popins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* 1.0 - Header Section
 =====================================================*/
 .header {
-    width: 85%;
-    height: 95%;
-    border: 1px solid #fff;
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
+  width: 85%;
+  height: 95%;
+  border: 1px solid #fff;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
 
-    /*--- Menu Side ---*/
-    &__menu-side {
-
-        h1 {
-            font-size: 20px;
-            font-weight: 500;
-            margin: 15px 0px 0px 20px;
-        }
-
-        .playlist {
-            margin: 40px 0 0 20px;
-
-            h4 {
-                font-size: 14px;
-                font-weight: 400;
-                padding-bottom: 10px;
-                color: #4c5262;
-                transition: .3s linear;
-
-                display: flex;
-                align-items: center;
-
-                &:hover {
-                    color: #fff;
-
-                    span::before {
-                        border: 2px solid #fff;
-                    }
-                }
-
-                span {
-                    position: relative;
-                    margin-right: 35px;
-
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        top: -4px;
-                        width: 4px;
-                        height: 4px;
-                        border: 2px solid #4c5262;
-                        border-radius: 50%;
-                        transition: .3s linear;
-
-                    }
-                }
-
-                .bi {
-                  display: none;  
-                }
-
-                &.active {
-                    color: #36e2ec;
-
-                    span {
-                        display: none;
-                    }
-
-                    .bi {
-                        display: flex;
-                        margin-right: 20px;
-
-                    }
-                }
-            }
-        }
-
-        .menu-song {
-            width: 100%;
-            height: 300px;
-            // border: 1px solid #fff;
-            margin-top: 40px;
-
-            &__item {
-                list-style-type: none;
-                padding: 5px 0px 5px 20px;
-                display: flex;
-                align-items: center;
-                margin-bottom: 10px;
-                cursor: pointer;
-                transition: .3s linear;
-
-                position: relative;
-
-                &:hover {
-                    background: rgba(105, 105, 170, .1);
-                }
-
-                span {
-                    font-size: 12px;
-                    font-weight: 600;
-                    color: #4c5262;
-                }
-
-                img {
-                    width: 32px;
-                    height: 32px;
-                    margin-left: 25px;
-                }
-
-                h5 {
-                    font-size: 11px;
-                    margin-left: 15px;
-
-                    .subtitle {
-                        font-size: 9px;
-                        color: #4c5262;
-                    }
-
-                    .bi {
-                        position: absolute;
-                        right: 15px;
-                        top: 6px;
-                        font-size: 16px;
-                    }
-                }
-
- 
-            }
-        }
-    }
-
-    /*--- Song Side ---*/
-    &__song-side {
-        width: 75%;
-        background: #0b1320;
-    }
-
-    /*--- Master Play ---*/
-    &__master-play {
-        width: 100%;
-        height: 10%;
-        background: #11172727;
-        box-shadow: 0px 3px 8px #090f1f;
-
-        display: flex;
-        align-items: center;
-        padding: 0px 20px;
-
-        .wave {
-            width: 30px;
-            height: 30px;
-            border: 1px solid #fff;
-            padding-bottom: 5px;
-
-            &__1 {
-                
-            }
-        }
-
-    }
-}
-
-
-.header__menu-side,
-.header__song-side {
+  &__menu-side,
+  &__song-side {
     position: relative;
     width: 25%;
     height: 90%;
@@ -193,4 +39,257 @@ body {
     background-color: #11172727;
     box-shadow: 5px 0px 2px #090f1f;
     color: #fff;
+  }
+
+  /*--- Menu Side ---*/
+  &__menu-side {
+    h1 {
+      font-size: 20px;
+      font-weight: 500;
+      margin: 15px 0px 0px 20px;
+    }
+
+    .playlist {
+      margin: 40px 0 0 20px;
+
+      h4 {
+        font-size: 14px;
+        font-weight: 400;
+        padding-bottom: 10px;
+        color: #4c5262;
+        transition: 0.3s linear;
+
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          color: #fff;
+
+          span::before {
+            border: 2px solid #fff;
+          }
+        }
+
+        span {
+          position: relative;
+          margin-right: 35px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: -4px;
+            width: 4px;
+            height: 4px;
+            border: 2px solid #4c5262;
+            border-radius: 50%;
+            transition: 0.3s linear;
+          }
+        }
+
+        .bi {
+          display: none;
+        }
+
+        &.active {
+          color: #36e2ec;
+
+          span {
+            display: none;
+          }
+
+          .bi {
+            display: flex;
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+
+    .menu-song {
+      width: 100%;
+      height: 300px;
+      // border: 1px solid #fff;
+      margin-top: 40px;
+
+      &__item {
+        list-style-type: none;
+        padding: 5px 0px 5px 20px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: 0.3s linear;
+
+        position: relative;
+
+        &:hover {
+          background: rgba(105, 105, 170, 0.1);
+        }
+
+        span {
+          font-size: 12px;
+          font-weight: 600;
+          color: #4c5262;
+        }
+
+        img {
+          width: 32px;
+          height: 32px;
+          margin-left: 25px;
+        }
+
+        h5 {
+          font-size: 11px;
+          margin-left: 15px;
+
+          .subtitle {
+            font-size: 9px;
+            color: #4c5262;
+          }
+
+          .bi {
+            position: absolute;
+            right: 15px;
+            top: 6px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  /*--- Song Side ---*/
+  &__song-side {
+    width: 75%;
+    background: #0b1320;
+  }
+
+  /*--- Master Play ---*/
+  &__master-play {
+    width: 100%;
+    height: 10%;
+    background: #11172727;
+    box-shadow: 0px 3px 8px #090f1f;
+
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+
+    .wave {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #fff;
+      padding-bottom: 5px;
+      display: flex;
+      align-items: flex-end;
+      margin-right: 10px;
+
+      &__1 {
+        width: 3px;
+        height: 10px;
+        margin-right: 3px;
+        border-radius: 10px 10px 0px 0px;
+        background: #36e2ec;
+        // animation: wave 0.5s linear infinite;
+        animation: unset;
+
+        &:nth-child(2) {
+          height: 13px;
+        //   animation-delay: 0.4s;
+        }
+
+        &:nth-child(3) {
+          height: 8px;
+        //   animation-delay: 0.8s;
+        }
+      }
+    }
+
+    img {
+        width: 35px;
+        height: 35px;
+    }
+
+    h5 {
+        width: 130px;
+        font-size: 13px;
+        margin-left: 15px;
+        color: #fff;
+        line-height: 12px;
+
+        .subtitle {
+            font-size: 11px;
+            color: #4c5262;
+        }
+    }
+
+    .icon {
+        font-size: 20px;
+        color: #fff;
+        margin: 0px 20px 0px 40px;
+
+        .bi {
+            outline: none;
+            cursor: pointer;
+
+            &:nth-child(2) {
+                border: 1px solid rgba(105, 105, 170, 0.1);
+                border-radius: 50%;
+                padding: 1px 3px 0px 6px;
+                margin: 0px 5px;
+                transition: .3s linear;
+            }
+        }
+    }
+
+    span {
+        color: #fff;
+        width: 32px;
+        font-size: 11px;
+        font-weight: 400;
+
+        &.current-start {
+            margin: 0 0 0 20px;
+        }
+    }
+
+    .bar {
+        position: relative;
+        width: 43%;
+        height: 2px;
+        background: rgba(105, 105, 170, .1);
+    }
+  }
+}
+
+/* 1.5 - JavaScript Class Wave
+=====================================================*/
+.header__master-play {
+  .active2 {
+    .wave {
+      &__1 {
+        animation: wave 0.5s linear infinite;
+
+        &:nth-child(2) {
+          animation-delay: 0.4s;
+        }
+
+        &:nth-child(3) {
+          animation-delay: 0.8s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes wave {
+  0% {
+    height: 10px;
+  }
+  50% {
+    height: 15px;
+  }
+  100% {
+    height: 10px;
+  }
 }
