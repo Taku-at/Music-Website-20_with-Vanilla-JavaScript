@@ -8,3 +8,6 @@
 ### Resource
  - Watch the tutorial on [YouTube](https://www.youtube.com/watch?v=JRta1R8lt8o) by KDS Coder
  - [Bootstrap-icons](https://icons.getbootstrap.com/#usage)
+
+
+1:11:49

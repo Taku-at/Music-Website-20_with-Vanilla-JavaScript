@@ -20,6 +20,10 @@ body {
   justify-content: center;
 }
 
+img {
+    width: 100%;
+    height: 100%;
+}
 /* 1.0 - Header Section
 =====================================================*/
 .header {
@@ -411,6 +415,61 @@ body {
             }
         }
     }
+
+    .popular-artists {
+        width: 90%;
+        height: auto;
+        // border: 1px solid #fff;
+        margin: auto;
+        margin-top: 15px;
+
+        &__h4 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .bi {
+                color: #a4a8b4;
+                cursor: pointer;
+                transition: .3s linear;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+
+        .item {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+            display: flex;
+
+            overflow-x: auto;
+            scroll-behavior: smooth;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            li {
+                list-style-type: none;
+                position: relative;
+                min-width: 60px;
+                height: 60px;
+                background: #fff;
+                border-radius: 50%;
+                margin-right: 20px;
+                cursor: pointer;
+
+                img {
+                    border-radius: 50%;
+                    position: absolute;
+                }
+            }
+        }
+    }
+
   }
 
   /*--- Master Play ---*/
