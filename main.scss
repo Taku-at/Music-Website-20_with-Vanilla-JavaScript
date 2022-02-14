@@ -162,6 +162,255 @@ body {
   &__song-side {
     width: 75%;
     background: #0b1320;
+
+    z-index: 2;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        background: url('./images/alan-walker-removebg-preview.jpg') no-repeat;
+        background-size: cover;
+        mix-blend-mode: color;
+        z-index: -1;
+    }
+
+    nav {
+        width: 90%;
+        height: 10%;
+        margin: auto;
+        // border: 1px solid #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        ul {
+            display: flex;
+
+            li {
+                position: relative;
+                list-style-type: none;
+                font-size: 13px;
+                color: #4c5262;
+                margin-right: 25px;
+                cursor: pointer;
+                transition: .3s linear;
+
+                &:hover {
+                    color: #fff;
+                }
+
+                &:nth-child(1) {
+                    color: #fff;
+                }
+
+                span {
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    width: 100%;
+                    height: 2.5px;
+                    background: #36e2ec;
+                    border-radius: 20px;
+                }
+            }
+        }
+
+        .search {
+            position: relative;
+            width: 40%;
+            padding: 1px 10px;
+            border-radius: 20px;
+            color: gray;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+                background: rgba(105, 105, 170, 0.1);
+                filter: blur(5px);
+                z-index: -1;
+            }
+
+            .bi {
+                font-size: 13px;
+                padding: 3px 0px 0px 10px;
+            }
+
+            input {
+                background: none;
+                outline: none;
+                border: none;
+                padding: 0px 10px;
+                color: #fff;
+                font-size: 12px;
+            }
+        }
+
+        .user {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+
+            img {
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                box-shadow: 2px 2px 8px #131312;
+            }
+        }
+    }
+
+    .content {
+        width: 90%;
+        height: 305;
+        margin: auto;
+        border: 1px solid #fff;
+        padding-top: 20px;
+
+        h1 {
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 11px;
+            font-weight: 400;
+            color: #4c5262;
+            margin: 5px;
+        }
+
+        .buttons {
+            margin-top: 15px;
+
+            button {
+                width: 130px;
+                height: 30px;
+                color: #fff;
+                background: #5adae0;
+                border: 2px solid #36e2ec;
+                border-radius: 20px;
+                outline: none;
+                cursor: pointer;
+                transition: .3s linear;
+
+                &:hover {
+                    border: 2px solid #36e2ec;
+                    background: none;
+                    color: #36e2ec;
+                }
+
+                &:nth-child(2) {
+                    border: 2px solid #36e2ec;
+                    background: none;
+                    color: #36e2ec;
+
+                    &:hover {
+                        color: #fff;
+                        background: #5adae0;
+                        border: 2px solid #36e2ec;
+                    }
+                }
+            }
+        }
+    }
+
+    .popular-song {
+        width: 90%;
+        height: auto;
+        // border: 1px solid #fff;
+        margin: auto;
+        margin-top: 15px;
+
+        &__h4 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .bi {
+                color: #a4a8b4;
+                cursor: pointer;
+                transition: .3s linear;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+
+        &__pop-song {
+            width: 100%;
+            height: 150px;
+            margin-top: 15px;
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .song-item {
+                min-width: 100px;
+                height: 140px;
+                list-style-type: none;
+                margin-right: 10px;
+                transition: .3s linear;
+
+                &:hover {
+                    background: rgba(105, 105, 170, 0.1);
+                }
+
+                .img-play {
+                    position: relative;
+                    width: 100px;
+                    height: 100px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:hover {
+
+                        .bi {
+                            opacity: 1;
+                        }
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .bi {
+                        position: absolute;
+                        font-size: 20px;
+                        cursor: pointer;
+                        transition: .3s linear;
+                        opacity: 0;
+                    }
+                }
+
+                h5 {
+                    padding: 5px 0px 0px 5px;
+                    line-height: 15px;
+                    font-size: 10px;
+
+                    .subtitle {
+                        font-size: 9px;
+                        color: #4c5262;
+                    }
+                }
+            }
+        }
+    }
   }
 
   /*--- Master Play ---*/
